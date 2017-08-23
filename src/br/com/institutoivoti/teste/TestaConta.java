@@ -11,7 +11,15 @@ public class TestaConta {
 	@Test
 	public void testaNome() {
 		Conta conta = new Conta();
-		assertEquals(conta.Titular("Grovy"), "Grovy");
+		conta.Titular("Grovy");
+		assertEquals(conta.getTitular(), "Grovy");
+	}
+	
+	@Test
+	public void testaAgencia() {
+		Conta conta = new Conta();
+		conta.Agencia("Grovy Bank");
+		assertEquals(conta.getAgencia(), "Grovy Bank");
 	}
 
 }
