@@ -2,24 +2,36 @@ package br.com.institutoivoti.teste;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import br.com.institutoivoti.lib.Conta;
 
 public class TestaConta {
+	private Conta conta;
+	
+	@Before
+	public void before() {
+		conta = new Conta();
+	}
+	
 
 	@Test
 	public void testaNome() {
-		Conta conta = new Conta();
-		conta.Titular("Grovy");
-		assertEquals(conta.getTitular(), "Grovy");
+		conta.Titular("Andre");
+		assertEquals(conta.getTitular(), "Andre");
 	}
 	
 	@Test
 	public void testaAgencia() {
-		Conta conta = new Conta();
-		conta.Agencia("Grovy Bank");
-		assertEquals(conta.getAgencia(), "Grovy Bank");
+		conta.Agencia("abestado");
+		assertEquals(conta.getAgencia(), "abestado");
+	}
+	
+	@Test
+	public void testaNumeroConta() {
+		conta.NumeroConta(4651);
+		assertEquals(conta.getNumero(), 4651);
 	}
 
 }
