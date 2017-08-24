@@ -18,20 +18,26 @@ public class TestaConta {
 
 	@Test
 	public void testaNome() {
-		conta.Titular("Andre");
-		assertEquals(conta.getTitular(), "Andre");
+		conta.Titular("Grovy");
+		assertEquals(conta.getTitular(), "Grovy");
 	}
 	
 	@Test
 	public void testaAgencia() {
-		conta.Agencia("abestado");
-		assertEquals(conta.getAgencia(), "abestado");
+		conta.Agencia("Grovy Bank");
+		assertEquals(conta.getAgencia(), "Grovy Bank");
 	}
 	
 	@Test
 	public void testaNumeroConta() {
 		conta.NumeroConta(4651);
 		assertEquals(conta.getNumero(), 4651);
+	}
+	
+	@Test
+	public void testaSaldo() {
+		conta.Saldo(23135.30);
+		assertEquals(conta.getSaldo(), 23135.30, 0);
 	}
 
 }
