@@ -32,6 +32,10 @@ public class Conta {
 	public double getSaldo() {
 		return this.saldo;
 	}
+	
+	public double incrementaSaldo() {
+		return this.saldo;
+	}
 
 	public String Titular(String nomeCidadao) {
 		return this.nome = nomeCidadao;
@@ -47,6 +51,10 @@ public class Conta {
 
 	public double Saldo(double saldoConta) {
 		return this.saldo = saldoConta;
+	}
+	
+	public double IncrementaSaldo(double saldoConta) {
+		return this.saldo += saldoConta;
 	}
 
 }

@@ -6,7 +6,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("as doidera doida");
+		System.out.println("conta java");
 
 	}
 

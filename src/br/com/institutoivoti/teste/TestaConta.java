@@ -30,14 +30,27 @@ public class TestaConta {
 	
 	@Test
 	public void testaNumeroConta() {
-		conta.NumeroConta(4651);
-		assertEquals(conta.getNumero(), 4651);
+		conta.NumeroConta(8000);
+		assertEquals(conta.getNumero(), 8000);
 	}
 	
 	@Test
 	public void testaSaldo() {
 		conta.Saldo(23135.30);
 		assertEquals(conta.getSaldo(), 23135.30, 0);
+	}
+	
+	@Test
+	public void testaSaldoZerado() {
+		conta.Saldo(0);
+		assertEquals(conta.getSaldo(), 0, 0);
+	}
+	
+	@Test
+	public void incrementaSaldo() {
+		conta.Saldo(0);
+		conta.IncrementaSaldo(20);
+		assertEquals(conta.incrementaSaldo(), 20, 0);
 	}
 
 }
