@@ -52,5 +52,26 @@ public class TestaConta {
 		conta.IncrementaSaldo(20);
 		assertEquals(conta.incrementaSaldo(), 20, 0);
 	}
+	
+	@Test
+	public void debito() {
+		conta.Saldo(50);
+		conta.DebitaDaConta(20);
+		assertEquals(conta.getDebitoConta(), 30, 0);
+	}
+	
+	@Test
+	public void saldoNegativo() {
+		conta.Saldo(0);
+		conta.DebitaDaConta(20);
+		assertEquals(conta.getDebitoConta(), -20, 0);
+	}
+	
+	@Test
+	public void incrementaSaldoNegativo() {
+		conta.Saldo(-10);
+		conta.IncrementaSaldo(20);
+		assertEquals(conta.incrementaSaldo(), 10, 0);
+	}
 
 }

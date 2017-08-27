@@ -36,6 +36,10 @@ public class Conta {
 	public double incrementaSaldo() {
 		return this.saldo;
 	}
+	
+	public double getDebitoConta() {
+		return this.saldo;
+	}
 
 	public String Titular(String nomeCidadao) {
 		return this.nome = nomeCidadao;
@@ -55,6 +59,10 @@ public class Conta {
 	
 	public double IncrementaSaldo(double saldoConta) {
 		return this.saldo += saldoConta;
+	}
+	
+	public double DebitaDaConta(double saldoConta) {
+		return this.saldo -= saldoConta;
 	}
 
 }
