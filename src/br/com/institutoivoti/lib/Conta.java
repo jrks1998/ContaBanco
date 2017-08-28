@@ -3,18 +3,12 @@ package br.com.institutoivoti.lib;
 public class Conta {
 	private String nome;
 	private String agencia;
-	private int numero;
+	private String numero;
 	private double saldo;
+	private double limite;
 	
 	public Conta() {
 	
-	}
-
-	public Conta(String nomeCidadao, String nomeAgencia, int numeroDaConta, double saldoConta) {
-		this.nome = nomeCidadao;
-		this.agencia = nomeAgencia;
-		this.numero = numeroDaConta;
-		this.saldo = saldoConta;
 	}
 
 	public String getTitular() {
@@ -25,7 +19,7 @@ public class Conta {
 		return this.agencia;
 	}
 
-	public int getNumero() {
+	public String getNumero() {
 		return this.numero;
 	}
 
@@ -40,6 +34,15 @@ public class Conta {
 	public double getDebitoConta() {
 		return this.saldo;
 	}
+	
+	public double getLimite() {
+		if (saldo <= limite) {
+			return saldo = 2;
+		} else {
+			return this.saldo;
+		}
+		
+	}
 
 	public String Titular(String nomeCidadao) {
 		return this.nome = nomeCidadao;
@@ -49,7 +52,7 @@ public class Conta {
 		return this.agencia = nomeAgencia;
 	}
 
-	public int NumeroConta(int numeroDaConta) {
+	public String NumeroConta(String numeroDaConta) {
 		return this.numero = numeroDaConta;
 	}
 
@@ -57,12 +60,19 @@ public class Conta {
 		return this.saldo = saldoConta;
 	}
 	
-	public double IncrementaSaldo(double saldoConta) {
-		return this.saldo += saldoConta;
-	}
-	
-	public double DebitaDaConta(double saldoConta) {
-		return this.saldo -= saldoConta;
+	public double IncrementaSaldo(double incrementoSaldo) {
+		return this.saldo += incrementoSaldo;
 	}
 
+	public double DebitaDaConta(double debito) {
+		return this.saldo -= debito;
+	}
+	
+	public double limiteConta(double limiteDaConta) {
+		return this.limite = limiteDaConta;
+	}
+		
 }
+
+	
+
