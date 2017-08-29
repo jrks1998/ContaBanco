@@ -19,13 +19,15 @@ public class TestaConta {
 	@Test
 	public void testaNome() {
 		conta.Titular("Grovy");
+		conta.cpfDoCidadao("038.828.850-76");
 		assertEquals(conta.getTitular(), "Grovy");
+		assertEquals(conta.getCPF(), "038.828.850-76");
 	}
 	
 	@Test
 	public void testaAgencia() {
-		conta.Agencia("Grovy Bank");
-		assertEquals(conta.getAgencia(), "Grovy Bank");
+		conta.Agencia("21-89");
+		assertEquals(conta.getAgencia(), "21-89");
 	}
 	
 	@Test
@@ -89,5 +91,12 @@ public class TestaConta {
 		conta.limiteConta(-10);
 		assertEquals(conta.getLimite(), 2, 0);
 	}
-
+	
+	@Test
+	public void testaCredito() {
+		conta.Saldo(789);
+		conta.Credito(100);
+		assertEquals(conta.getCredito(), 889, 0);
+	}
+	
 }

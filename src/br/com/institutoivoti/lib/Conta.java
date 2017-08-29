@@ -6,6 +6,7 @@ public class Conta {
 	private String numero;
 	private double saldo;
 	private double limite;
+	private String cpf;
 	
 	public Conta() {
 	
@@ -43,6 +44,14 @@ public class Conta {
 		}
 		
 	}
+	
+	public String getCPF() {
+		return this.cpf;
+	}
+	
+	public double getCredito() {
+		return this.saldo;
+	}
 
 	public String Titular(String nomeCidadao) {
 		return this.nome = nomeCidadao;
@@ -70,6 +79,14 @@ public class Conta {
 	
 	public double limiteConta(double limiteDaConta) {
 		return this.limite = limiteDaConta;
+	}
+	
+	public String cpfDoCidadao(String cpfConta) {
+		return this.cpf = cpfConta;
+	}
+	
+	public double Credito(double credito) {
+		return this.saldo += credito;
 	}
 		
 }
