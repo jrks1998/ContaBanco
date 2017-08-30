@@ -36,13 +36,8 @@ public class Conta {
 		return this.saldo;
 	}
 	
-	public double getLimite() {
-		if (saldo <= limite) {
-			return saldo = 2;
-		} else {
-			return this.saldo;
-		}
-		
+	public boolean getLimite() {
+		return this.saldo <= this.limite;
 	}
 	
 	public String getCPF() {
