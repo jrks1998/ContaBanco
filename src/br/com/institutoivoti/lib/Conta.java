@@ -1,14 +1,17 @@
 package br.com.institutoivoti.lib;
 
+import java.util.Scanner;
+
 public class Conta {
 	private String nome;
 	private String agencia;
 	private String numero;
 	private double saldo;
 	private double limite;
+	private String cpf;
 	
 	public Conta() {
-	
+		
 	}
 
 	public String getTitular() {
@@ -27,21 +30,20 @@ public class Conta {
 		return this.saldo;
 	}
 	
-	public double incrementaSaldo() {
+	public double getDebito() {
 		return this.saldo;
 	}
 	
-	public double getDebitoConta() {
-		return this.saldo;
+	public boolean getLimite() {
+		return this.saldo <= this.limite;
 	}
 	
-	public double getLimite() {
-		if (saldo <= limite) {
-			return saldo = 2;
-		} else {
-			return this.saldo;
-		}
-		
+	public String getCPF() {
+		return this.cpf;
+	}
+	
+	public double getCredito() {
+		return this.saldo;
 	}
 
 	public String Titular(String nomeCidadao) {
@@ -56,23 +58,40 @@ public class Conta {
 		return this.numero = numeroDaConta;
 	}
 
-	public double Saldo(double saldoConta) {
-		return this.saldo = saldoConta;
+	public double Saldo() {
+		return this.saldo;
 	}
 	
-	public double IncrementaSaldo(double incrementoSaldo) {
-		return this.saldo += incrementoSaldo;
+	public double Credito(double creditoConta) {
+		return this.saldo += creditoConta;
 	}
 
-	public double DebitaDaConta(double debito) {
-		return this.saldo -= debito;
+	public double Debito(double debitoConta) {
+		return this.saldo -= debitoConta;
 	}
 	
 	public double limiteConta(double limiteDaConta) {
 		return this.limite = limiteDaConta;
 	}
-		
-}
-
 	
-
+	public String cpfDoCidadao(String cpfConta) {
+		return this.cpf = cpfConta;
+	}
+	
+	public void ImprimeDados() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("nome do titular da conta: ");
+		nome = scan.next();
+		System.out.println("numero da conta: ");
+		numero = scan.next();
+		System.out.println("cpf do titular: ");
+		cpf = scan.next();
+		System.out.println("agencia: ");
+		agencia = scan.next();
+		System.out.println("nome: " +nome);
+		System.out.println("numero da conta: " +numero);
+		System.out.println("cpf: " +cpf);
+		System.out.println("agencia: " +agencia);
+	}
+	
+}
