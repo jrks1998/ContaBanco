@@ -4,7 +4,7 @@ public class Conta {
 	private String nome;
 	private String agencia;
 	private String numero;
-	private double saldo;
+	private int saldo;
 	private double limite;
 	private String cpf;
 	
@@ -24,7 +24,7 @@ public class Conta {
 		return this.numero;
 	}
 
-	public double getSaldo() {
+	public int getSaldo() {
 		return this.saldo;
 	}
 	
@@ -60,12 +60,12 @@ public class Conta {
 		return this.numero = numeroDaConta;
 	}
 
-	public double Saldo(double saldoConta) {
-		return this.saldo = saldoConta;
+	public int Saldo() {
+		return this.saldo;
 	}
 	
-	public double IncrementaSaldo(double incrementoSaldo) {
-		return this.saldo += incrementoSaldo;
+	public double Credito(double creditoConta) {
+		return this.saldo += creditoConta;
 	}
 
 	public double DebitaDaConta(double debito) {
@@ -78,10 +78,6 @@ public class Conta {
 	
 	public String cpfDoCidadao(String cpfConta) {
 		return this.cpf = cpfConta;
-	}
-	
-	public double Credito(double credito) {
-		return this.saldo += credito;
 	}
 		
 }
