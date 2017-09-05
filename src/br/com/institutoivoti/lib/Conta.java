@@ -6,7 +6,7 @@ public class Conta {
 	private String nome;
 	private String agencia;
 	private String numero;
-	private int saldo;
+	private double saldo;
 	private double limite;
 	private String cpf;
 	
@@ -26,7 +26,7 @@ public class Conta {
 		return this.numero;
 	}
 
-	public int getSaldo() {
+	public double getSaldo() {
 		return this.saldo;
 	}
 	
@@ -58,7 +58,7 @@ public class Conta {
 		return this.numero = numeroDaConta;
 	}
 
-	public int Saldo() {
+	public double Saldo() {
 		return this.saldo;
 	}
 	
@@ -92,6 +92,7 @@ public class Conta {
 		System.out.println("numero da conta: " +numero);
 		System.out.println("cpf: " +cpf);
 		System.out.println("agencia: " +agencia);
+		System.out.println("saldo: " +saldo);
 	}
 	
 }

@@ -11,6 +11,7 @@ public class Main {
 		System.out.println("Cadastro de conta");
 		
 		Conta conta = new Conta();
+		conta.Credito(4000.30);
 		conta.ImprimeDados();
 		
 		}
