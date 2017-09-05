@@ -43,7 +43,7 @@ public class TestaConta {
 	}
 	
 	@Test
-	public void debito() {
+	public void testaDebito() {
 		conta.Debito(20);
 		assertEquals(conta.getDebito(), -20, 0);
 	}
@@ -55,30 +55,7 @@ public class TestaConta {
 	}
 	
 	@Test
-	public void excedeLimiteConta() {
-		conta.Saldo();
-		conta.Credito(100);
-		conta.Debito(120);
-		assertEquals(conta.getSaldo(), -20);
-	}
-	
-	@Test
-	public void incrementaSaldo() {
-		conta.Saldo();
-		conta.Credito(20);
-		assertEquals(conta.getCredito(), 20, 0);
-	}
-	
-	@Test
-	public void saldoNegativo() {
-		conta.Saldo();
-		conta.Debito(10);
-		assertEquals(conta.getDebito(), -10, 0);
-	}
-	
-	@Test
 	public void testaLimiteSaldo() {
-		conta.Saldo();
 		conta.Debito(20);
 		conta.limiteConta(-30);
 		assertEquals(conta.getLimite(), false);
