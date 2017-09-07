@@ -1,21 +1,20 @@
 package br.com.institutoivoti.lib;
 
-import java.util.Scanner;
-
 public class Conta {
-	private String nome;
+	private String titular;
 	private String agencia;
 	private String numero;
 	private int saldo;
-	private double limite;
-	private String cpf;
 	
-	public Conta() {
-		
+	public Conta(String nome, String agenciaConta, String numeroConta) {
+		this.titular = nome;
+		this.agencia = agenciaConta;
+		this.numero = numeroConta;
+		this.saldo = 0;
 	}
 
 	public String getTitular() {
-		return this.nome;
+		return this.titular;
 	}
 
 	public String getAgencia() {
@@ -34,20 +33,12 @@ public class Conta {
 		return this.saldo;
 	}
 	
-	public boolean getLimite() {
-		return this.saldo <= this.limite;
-	}
-	
-	public String getCPF() {
-		return this.cpf;
-	}
-	
 	public double getCredito() {
 		return this.saldo;
 	}
 
-	public String Titular(String nomeCidadao) {
-		return this.nome = nomeCidadao;
+	public String Titular() {
+		return this.titular;
 	}
 
 	public String Agencia(String nomeAgencia) {
@@ -70,28 +61,12 @@ public class Conta {
 		return this.saldo -= debitoConta;
 	}
 	
-	public double limiteConta(double limiteDaConta) {
-		return this.limite = limiteDaConta;
-	}
-
-	public String cpfDoCidadao(String cpfConta) {
-		return this.cpf = cpfConta;
-	}
-	
 	public void ImprimeDados() {
-		Scanner scan = new Scanner(System.in);
-		System.out.println("nome do titular da conta: ");
-		nome = scan.next();
-		System.out.println("numero da conta: ");
-		numero = scan.next();
-		System.out.println("cpf do titular: ");
-		cpf = scan.next();
-		System.out.println("agencia: ");
-		agencia = scan.next();
-		System.out.println("nome: " +nome);
-		System.out.println("numero da conta: " +numero);
-		System.out.println("cpf: " +cpf);
-		System.out.println("agencia: " +agencia);
+		System.out.println("Informações da conta");		
+		System.out.println("nome: " + this.titular);
+		System.out.println("numero da conta: " + this.numero);
+		System.out.println("agencia: " + this.agencia);
+		System.out.println("saldo: " +this.saldo);
 	}
 	
 }

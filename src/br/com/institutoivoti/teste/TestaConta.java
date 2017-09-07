@@ -12,28 +12,15 @@ public class TestaConta {
 	
 	@Before
 	public void before() {
-		conta = new Conta();
+		conta = new Conta("Jonas", "22-55", "6565-8");
 	}
 	
 
 	@Test
-	public void testaNomeECPF() {
-		conta.Titular("Grovy");
-		conta.cpfDoCidadao("038.828.850-76");
-		assertEquals(conta.getTitular(), "Grovy");
-		assertEquals(conta.getCPF(), "038.828.850-76");
-	}
-	
-	@Test
-	public void testaAgencia() {
-		conta.Agencia("21-89");
-		assertEquals(conta.getAgencia(), "21-89");
-	}
-	
-	@Test
-	public void testaNumeroConta() {
-		conta.NumeroConta("1234-5");
-		assertEquals(conta.getNumero(), "1234-5");
+	public void testaDadosDaConta() {
+		assertEquals(conta.getTitular(), "Jonas");
+		assertEquals(conta.getAgencia(), "22-55");
+		assertEquals(conta.getNumero(), "6565-8");
 	}
 	
 	@Test
@@ -44,29 +31,15 @@ public class TestaConta {
 	
 	@Test
 	public void testaDebito() {
+		conta.Credito(100);
 		conta.Debito(20);
-		assertEquals(conta.getDebito(), -20, 0);
+		assertEquals(conta.getDebito(), 80, 0);
 	}
 	
 	@Test
 	public void testaCredito() {
 		conta.Credito(100);
 		assertEquals(conta.getCredito(), 100, 0);
-	}
-	
-	@Test
-	public void testaLimiteSaldo() {
-		conta.Debito(20);
-		conta.limiteConta(-30);
-		assertEquals(conta.getLimite(), false);
-	}
-	
-	@Test
-	public void excedendoLimiteConta() {
-		conta.Saldo();
-		conta.Debito(110);
-		conta.limiteConta(-10);
-		assertEquals(conta.getLimite(), true);
 	}
 	
 }
