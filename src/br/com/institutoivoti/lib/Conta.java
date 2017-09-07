@@ -4,7 +4,7 @@ public class Conta {
 	private String titular;
 	private String agencia;
 	private String numero;
-	private int saldo;
+	private double saldo;
 	
 	public Conta(String nome, String agenciaConta, String numeroConta) {
 		this.titular = nome;
@@ -25,7 +25,7 @@ public class Conta {
 		return this.numero;
 	}
 
-	public int getSaldo() {
+	public double getSaldo() {
 		return this.saldo;
 	}
 	
@@ -41,15 +41,15 @@ public class Conta {
 		return this.titular;
 	}
 
-	public String Agencia(String nomeAgencia) {
-		return this.agencia = nomeAgencia;
+	public String Agencia() {
+		return this.agencia;
 	}
 
-	public String NumeroConta(String numeroDaConta) {
-		return this.numero = numeroDaConta;
+	public String NumeroConta() {
+		return this.numero;
 	}
 
-	public int Saldo() {
+	public double Saldo() {
 		return this.saldo;
 	}
 	
